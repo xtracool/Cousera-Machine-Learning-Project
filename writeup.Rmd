@@ -2,7 +2,7 @@
 title: "Coursera Machine Learning Project Writeup"
 author: "Ven Reddy"
 date: "Thursday, September 24, 2015"
-output: html_document
+output: pdf_document
 ---
 ##Assignment
 
