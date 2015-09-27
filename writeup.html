@@ -183,18 +183,108 @@ cm &lt;- confusionMatrix(pred, testData$classe)</code></pre>
 ## Detection Rate         0.2845   0.1915   0.1721   0.1621   0.1833
 ## Detection Prevalence   0.2859   0.1935   0.1748   0.1625   0.1833
 ## Balanced Accuracy      0.9990   0.9935   0.9920   0.9942   0.9989</code></pre>
-<p>The accuracy of the model is almost 99.5% which should be good enough to use as model to predict class type of the testing data.</p>
+</div>
+<div id="confusion-matrix-and-statistics" class="section level2">
+<h2>Confusion Matrix and Statistics</h2>
+</div>
+<div id="section" class="section level2">
+<h2></h2>
+</div>
+<div id="reference" class="section level2">
+<h2>Reference</h2>
+</div>
+<div id="prediction-a-b-c-d-e" class="section level2">
+<h2>Prediction A B C D E</h2>
+</div>
+<div id="a-1395-7-0-0-0" class="section level2">
+<h2>A 1395 7 0 0 0</h2>
+</div>
+<div id="b-0-939-9-1-0" class="section level2">
+<h2>B 0 939 9 1 0</h2>
+</div>
+<div id="c-0-3-844-8-2" class="section level2">
+<h2>C 0 3 844 8 2</h2>
+</div>
+<div id="d-0-0-2-795-0" class="section level2">
+<h2>D 0 0 2 795 0</h2>
+</div>
+<div id="e-0-0-0-0-899" class="section level2">
+<h2>E 0 0 0 0 899</h2>
+</div>
+<div id="section-1" class="section level2">
+<h2></h2>
+</div>
+<div id="overall-statistics" class="section level2">
+<h2>Overall Statistics</h2>
+</div>
+<div id="section-2" class="section level2">
+<h2></h2>
+</div>
+<div id="accuracy-0.9935" class="section level2">
+<h2>Accuracy : 0.9935</h2>
+</div>
+<div id="ci-0.9908-0.9955" class="section level2">
+<h2>95% CI : (0.9908, 0.9955)</h2>
+</div>
+<div id="no-information-rate-0.2845" class="section level2">
+<h2>No Information Rate : 0.2845</h2>
+</div>
+<div id="p-value-acc-nir-2.2e-16" class="section level2">
+<h2>P-Value [Acc &gt; NIR] : &lt; 2.2e-16</h2>
+</div>
+<div id="section-3" class="section level2">
+<h2></h2>
+</div>
+<div id="kappa-0.9917" class="section level2">
+<h2>Kappa : 0.9917</h2>
+</div>
+<div id="mcnemars-test-p-value-na" class="section level2">
+<h2>Mcnemar’s Test P-Value : NA</h2>
+</div>
+<div id="section-4" class="section level2">
+<h2></h2>
+</div>
+<div id="statistics-by-class" class="section level2">
+<h2>Statistics by Class:</h2>
+</div>
+<div id="section-5" class="section level2">
+<h2></h2>
+</div>
+<div id="class-a-class-b-class-c-class-d-class-e" class="section level2">
+<h2>Class: A Class: B Class: C Class: D Class: E</h2>
+</div>
+<div id="sensitivity-1.0000-0.9895-0.9871-0.9888-0.9978" class="section level2">
+<h2>Sensitivity 1.0000 0.9895 0.9871 0.9888 0.9978</h2>
+</div>
+<div id="specificity-0.9980-0.9975-0.9968-0.9995-1.0000" class="section level2">
+<h2>Specificity 0.9980 0.9975 0.9968 0.9995 1.0000</h2>
+</div>
+<div id="pos-pred-value-0.9950-0.9895-0.9848-0.9975-1.0000" class="section level2">
+<h2>Pos Pred Value 0.9950 0.9895 0.9848 0.9975 1.0000</h2>
+</div>
+<div id="neg-pred-value-1.0000-0.9975-0.9973-0.9978-0.9995" class="section level2">
+<h2>Neg Pred Value 1.0000 0.9975 0.9973 0.9978 0.9995</h2>
+</div>
+<div id="prevalence-0.2845-0.1935-0.1743-0.1639-0.1837" class="section level2">
+<h2>Prevalence 0.2845 0.1935 0.1743 0.1639 0.1837</h2>
+</div>
+<div id="detection-rate-0.2845-0.1915-0.1721-0.1621-0.1833" class="section level2">
+<h2>Detection Rate 0.2845 0.1915 0.1721 0.1621 0.1833</h2>
+</div>
+<div id="detection-prevalence-0.2859-0.1935-0.1748-0.1625-0.1833" class="section level2">
+<h2>Detection Prevalence 0.2859 0.1935 0.1748 0.1625 0.1833</h2>
+</div>
+<div id="balanced-accuracy-0.9990-0.9935-0.9920-0.9942-0.9989" class="section level2">
+<h2>Balanced Accuracy 0.9990 0.9935 0.9920 0.9942 0.9989</h2>
+<p>The accuracy of the model is almost 99.5% which should be good enough to use as model to predict class type of the testing data. Giving an sample error of 0.53%.</p>
 </div>
 <div id="predict-the-test-cases" class="section level2">
 <h2>Predict the test cases</h2>
-<pre class="r"><code>if (1) {
-testingRaw &lt;- data.frame(testingRaw)
+<pre class="r"><code>testingRaw &lt;- data.frame(testingRaw)
 testingRaw &lt;- testingRaw[, !is.na(colSums(testingRaw != 0)) &amp; colSums(testingRaw != 0) &gt; 0]
 
 # Remove unwanted columns
 testRaw &lt;- testingRaw %&gt;% select(-starts_with(&quot;X&quot;), -contains(&quot;timestamp&quot;), -contains(&quot;window&quot;), -contains(&quot;user_name&quot;))
-
-}
 
 #Predict the classe outcome using our model
 pred2 &lt;- predict(mtrain, testRaw)
